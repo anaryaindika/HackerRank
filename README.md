@@ -5,5 +5,5 @@
 
 ## Problem Solving
 ### Algorithms
-* #### Warmup
-* Solve Me First
+* **Warmup**
+  * Solve Me First
