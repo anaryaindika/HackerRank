@@ -4,6 +4,6 @@
 </div>
 
 ## Problem Solving
-### Algorithms
-* [**Implementation**](./Algorithms/Implementation/)
-  * [Climbing the Leaderboard](./Algorithms/Implementation/ClimbingtheLeaderboard)
+**Algorithms**
+* Implementation
+  * [Climbing the Leaderboard](./Algorithms/Implementation/Climbing%20the%20Leaderboard)
