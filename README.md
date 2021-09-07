@@ -5,5 +5,5 @@
 
 ## Problem Solving
 ### Algorithms
-* **Implementation**
-  * Climbing the Leaderboard
+* [**Implementation**](./Algorithms/Implementation/)
+  * [Climbing the Leaderboard](./Algorithms/Implementation/ClimbingtheLeaderboard)
