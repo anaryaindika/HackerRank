@@ -23,34 +23,33 @@ class Result {
 
     public static int getTotalX(List<Integer> a, List<Integer> b) {
     // Write your code here
-        ArrayList<Integer> factors = new ArrayList<>();
-        ArrayList<Integer> final_factors = new ArrayList<>();     
+        ArrayList<Integer> consideredInts = new ArrayList<>();
+        int consideredIntAmount = 0;
         for (int i=1;i<=Collections.min(b);i++) {
-            boolean status = true;
-            for (int j=0;j<a.size();j++) {
-                if (i%a.get(j) != 0) {
-                    status = false;
-                    break;                    
-                }
-            }
-            if (status == true && factors.contains(i) == false && i >= a.get(a.size()-1) && i <= b.get(0)) {
-                factors.add(i);
-            }
-        }        
-        Collections.sort(factors);
-        for (int i=0;i<factors.size();i++) {
-            boolean status = true;
-            for (int j=0;j<b.size();j++) {
-                if (b.get(j)%factors.get(i) != 0) {
-                    status = false;
+            boolean isFactor = true;
+            for (int factor : a) {
+                if (i%factor != 0) {
+                    isFactor = false;
                     break;
                 }
             }
-            if (status == true) {
-                final_factors.add(factors.get(i));
-            }
+            if (isFactor && !consideredInts.contains(i) && i>=a.get(a.size()-1)) {
+                consideredInts.add(i);
+            }            
         }                
-        return final_factors.size();
+        for (int factor : consideredInts) {
+            boolean isFactor = true;
+            for (int consideredInt : b) {
+                if (consideredInt%factor != 0) {
+                    isFactor = false;
+                    break;
+                }
+            }
+            if (isFactor) {
+                consideredIntAmount++;
+            }
+        }
+        return consideredIntAmount;
     }
 
 }
