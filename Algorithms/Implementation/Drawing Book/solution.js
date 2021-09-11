@@ -33,11 +33,10 @@ function readLine() {
 
 function pageCount(n, p) {
     // Write your code here
-    const totalTurnFront = n/2;    
+    const totalTurnFront = Math.floor(n/2);
     const totalTargetTurnFront = Math.floor(p/2);    
     const totalTargetTurnBack = totalTurnFront - totalTargetTurnFront;    
-    const minTurn = Math.min(totalTargetTurnFront,totalTargetTurnBack);
-    return Math.floor(minTurn);
+    return Math.min(totalTargetTurnFront,totalTargetTurnBack);
 }
 
 function main() {
