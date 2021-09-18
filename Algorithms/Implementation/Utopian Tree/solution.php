@@ -10,17 +10,18 @@
 function utopianTree($n) {
     // Initialize height of the planted tree and the beginning of cycle.    
     $height = 1;
-    $i = 0;    
+    $cycle = 0;
+    $endCycle = $n;
     // Iterate through each cycle.    
-    while ($i < $n) {                
-        if ($i%2 == 0) {
+    while ($cycle < $endCycle) {                
+        if ($cycle%2 == 0) {
             // Double the height if cycle is even numbered (spring).
             $height *= 2;
         } else {
             // Plus by one if cycle is odd numbered (summer).
             $height++;
         }        
-        $i++;
+        $cycle++;
     }    
     return $height;
 }
