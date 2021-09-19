@@ -29,7 +29,7 @@ function beautifulDays($i, $j, $k) {
         $reverseDay = strrev($day);
         // Detemine the absolute difference.
         $absDifference = abs($day-$reverseDay);        
-        /* Check if number is beautiful (divisible by divisor).
+        /* Check if number is beautiful (absolute difference divisible by divisor).
          * Add the beautiful number amount if number is beautiful.
         */
         if ($absDifference%$divisor == 0) {
