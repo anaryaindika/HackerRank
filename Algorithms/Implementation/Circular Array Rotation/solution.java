@@ -39,10 +39,10 @@ class Result {
         */
         Collections.rotate(array, rotation);
         for (int query : queries) {
-            rotatedArray.add(array.get(query));
+            queriedArray.add(array.get(query));
         }
         
-        return array;        
+        return queriedArray;        
     }
 
 }
