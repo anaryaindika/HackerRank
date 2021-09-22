@@ -55,14 +55,6 @@ function circularArrayRotation(a, k, queries) {
     return queriedArray;
 }
 
-// function rotateArray(array, rotationCount) {
-//     var rotatedArray = array;
-//     for (let i=0; i<rotationCount; i++) {
-//         rotatedArray = rotatedArray.push(rotatedArray.shift());
-//     }
-//     return rotatedArray;
-// }
-
 function main() {
     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
 
